@@ -1,1 +1,1 @@
-# A simple gRPC ToDo app
+# A simple gRPC Server

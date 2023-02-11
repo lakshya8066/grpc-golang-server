@@ -1,1 +1,1 @@
-# grpc-golang-server
+# A simple gRPC ToDo app

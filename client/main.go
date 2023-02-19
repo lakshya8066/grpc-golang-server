@@ -9,7 +9,7 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 )
 
-const port = ":22000"
+const port = ":23000"
 
 func main() {
 	conn, err := grpc.Dial("localhost"+port, grpc.WithTransportCredentials(insecure.NewCredentials()))
@@ -21,9 +21,10 @@ func main() {
 
 	client := pb.NewGreetServiceClient(conn)
 
-	// names := &pb.NamesList{
-	// 	Names: []string{"Raman", "Aman", "Naman"},
-	// }
+	names := &pb.NamesList{
+		Names: []string{"Raman", "Aman", "Naman"},
+	}
 
-	callSayHello(client)
+	// callSayHello(client)
+	callSayHelloServerStream(client, names)
 }

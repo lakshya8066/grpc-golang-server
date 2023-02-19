@@ -12,7 +12,7 @@ type helloServer struct {
 	pb.GreetServiceServer
 }
 
-const port = ":22000"
+const port = ":23000"
 
 func main() {
 	lis, err := net.Listen("tcp", port)
